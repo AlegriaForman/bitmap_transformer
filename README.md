@@ -2,6 +2,8 @@
 
 Code Fellows assignment for the Code 401 class.
 
+Pair programming by Tim Forman and Ali Forman
+
 User instructions:
 
 In the terminal, navigate to the root folder containing the bitmap transformer.
