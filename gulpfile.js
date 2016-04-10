@@ -1,9 +1,9 @@
 'use strict';
 
 const gulp = require('gulp');
-var eslint = require('gulp-eslint');
-var eslintRules = require(__dirname + '/.eslintrc');
-var files = ['lib/*.js', '/index.js', '/gulpfile.js'];
+const eslint = require('gulp-eslint');
+const mocha = require('gulp-mocha');
+const files = ['lib/*.js', '/index.js', '/gulpfile.js'];
 
 gulp.task('mocha:test', () => {
   return gulp.src('./test/*.js')
@@ -12,13 +12,13 @@ gulp.task('mocha:test', () => {
 
 gulp.task('lint:test', () => {
   return gulp.src('./test/*.js')
-    .pipe(eslint(eslintRules))
+    .pipe(eslint())
     .pipe(eslint.format());
 });
 
 gulp.task('lint:nontest', () => {
   return gulp.src(files)
-  .pipe(eslint(eslintRules))
+  .pipe(eslint())
   .pipe(eslint.format());
 });
 
